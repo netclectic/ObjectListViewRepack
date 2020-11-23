@@ -39,6 +39,7 @@ namespace BrightIdeasSoftware {
     /// </summary>
     [Browsable(false)]
     public class OLVListSubItem : ListViewItem.ListViewSubItem {
+
         #region Constructors
 
         /// <summary>
@@ -50,7 +51,7 @@ namespace BrightIdeasSoftware {
         /// <summary>
         /// Create a OLVListSubItem that shows the given string and image
         /// </summary>
-        public OLVListSubItem(object modelValue, string text, Object image) {
+        public OLVListSubItem(ListViewItem owner, object modelValue, string text, Object image) : base(owner, text) {
             this.ModelValue = modelValue;
             this.Text = text;
             this.ImageSelector = image;
